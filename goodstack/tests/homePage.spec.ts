@@ -145,6 +145,6 @@ test.describe('Verify', () => {
         await expect(donationsPage.getStartedButton).toBeEnabled()
 
         const timestamp = new Date().getTime()
-        await page.screenshot({ path: `screenshots/screenshot-${timestamp}.png` })
+        await page.screenshot({ path: `goodstack/screenshots/screenshot-${timestamp}.png` })
     })
 })
