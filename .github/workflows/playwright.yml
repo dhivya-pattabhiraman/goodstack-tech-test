@@ -22,14 +22,14 @@ jobs:
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
-        name: goodstack-playwright-report
-        path: goodstack-playwright-report/
+        name: goodstack-test-reports
+        path: goodstack/test-reports/
         retention-days: 3
     - name: Run new site tests
       run: npm run test:newsite
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
-        name: newsite-playwright-report
-        path: newsite-playwright-report/
+        name: new-site-test-reports
+        path: new-site/test-reports/
         retention-days: 3

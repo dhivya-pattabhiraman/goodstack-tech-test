@@ -24,7 +24,7 @@ After(async function ({ pickle, result }) {
     if (result?.status === Status.FAILED) {
         console.error('\nScenario Failed:', pickle.name)
         // Screenshots are saved in the directory after the test is completed for each scenario
-        await pageFixture.page.screenshot({ path: `new-site/target/screenshots/${pickle.name}.png`, type: 'png' })
+        await pageFixture.page.screenshot({ path: `new-site/screenshots/${pickle.name}.png`, type: 'png' })
     } else {
         console.info('\nScenario Finished:', pickle.name)
     }

@@ -13,8 +13,8 @@
     "format": [
       "pretty",
       "progress-bar",
-      "html:new-site/target/cucumber-report.html",
-      "json:new-site/target/cucumber-report.json"
+      "html:new-site/test-reports/cucumber-report.html",
+      "json:new-site/test-reports/cucumber-report.json"
     ]
   }
 }
