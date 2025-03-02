@@ -1,0 +1,20 @@
+{
+  "default": {
+    "paths": [
+      "new-site/features"
+    ],
+    "require": [
+      "new-site/step-definitions/*.ts", "new-site/hooks/*.ts"
+    ],
+    "formatOptions": {
+      "snippetInterface": "async-await"
+    },
+    "requireModule": ["ts-node/register"],
+    "format": [
+      "pretty",
+      "progress-bar",
+      "html:new-site/target/cucumber-report.html",
+      "json:new-site/target/cucumber-report.json"
+    ]
+  }
+}

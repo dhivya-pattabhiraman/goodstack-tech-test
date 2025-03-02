@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:goodstack": "playwright test --config=./goodstack/playwright.config.ts homePage.spec.ts"
+    "test:goodstack": "playwright test --config=./goodstack/playwright.config.ts homePage.spec.ts",
+    "test:newsite": "cucumber-js test --config=./new-site/cucumber.json"
   },
   "author": "",
   "license": "ISC",
@@ -12,7 +13,9 @@
     "playwright": "^1.50.1"
   },
   "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
     "@playwright/test": "^1.50.1",
-    "@types/node": "^22.13.1"
+    "@types/node": "^22.13.8",
+    "ts-node": "^10.9.2"
   }
 }
