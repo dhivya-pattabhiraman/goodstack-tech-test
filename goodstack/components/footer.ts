@@ -28,7 +28,7 @@ export class Footer {
     }
 
     // Methods
-    async clickFooterLink(name: string) {
+    clickFooterLink(name: string) {
         return this.footerLink(name).click()
     }
 }

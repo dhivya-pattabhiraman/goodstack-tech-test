@@ -25,13 +25,14 @@ export class Navigation {
     }
 
     // Methods
-    async clickMenu(name: string) {
+    clickMenu(name: string) {
         return this.menu(name).click()
     }
     async clickMenuItem(name: string) {
-        return this.menuItem(name).click()
+        await this.menuItem(name).click()
+        return this.page.waitForLoadState('domcontentloaded')
     }
-    async clickGetStartedButton() {
+    clickGetStartedButton() {
         return this.getStartedButton.click()
     }
 }

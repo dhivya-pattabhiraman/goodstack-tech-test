@@ -44,7 +44,7 @@ export class DonationsPage {
     }
 
     // Methods
-    async visit(): Promise<any> {
+    visit() {
         return this.page.goto(this.url, {waitUntil: 'domcontentloaded'})
     }
 
