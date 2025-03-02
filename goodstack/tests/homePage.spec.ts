@@ -39,7 +39,7 @@ test.describe('Verify Home page', () => {
         Object.values(navigationMenu)
             .map(async (name) => await expect(navigation.menu(name)).toBeVisible())
 
-        async function verifyMenuItems(menuItems: { [s: string]: unknown } ) {
+        async function verifyMenuItems(menuItems: { [itemName: string]: { label: string; description: string; link: string } } ) {
             return Object.values(menuItems)
                 .map(async ({label, description, link}) => {
                     await expect(navigation.menuItem(label)).toBeVisible()
@@ -82,7 +82,7 @@ test.describe('Verify Home page', () => {
         Object.values(categories)
             .map(async (name) => await expect(footer.category(name)).toBeVisible())
 
-        async function verifyFooterLinks(footerLinks: { [s: string]: unknown } ) {
+        async function verifyFooterLinks(footerLinks: { [s: string]: { label: string; link: string } } ) {
             return Object.values(footerLinks)
                 .map(async ({label, link}) => {
                     await expect(footer.footerLink(label)).toBeVisible()

@@ -1,7 +1,7 @@
 import { Page } from '@playwright/test'
 
 import { Navigation } from '../components/navigation'
-import { Footer } from "../components/footer";
+import { Footer } from '../components/footer'
 
 export class HomePage {
     page: Page
