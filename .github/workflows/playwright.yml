@@ -17,8 +17,10 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    - name: Run Playwright tests
+    - name: Run Goodstack tests
       run: npm run test:goodstack
+    - name: Run new site tests
+      run: npm run test:newsite
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
